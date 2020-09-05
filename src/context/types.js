@@ -1,0 +1,2 @@
+export const ADD_COMPARE = 'ADD_COMPARE';
+export const REMOVE_COMPARE = 'REMOVE_COMPARE';

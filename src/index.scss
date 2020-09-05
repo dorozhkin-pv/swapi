@@ -1,0 +1,154 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  padding: 1rem 0;
+  .logo {
+    padding-left: 1rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  .nav-link {
+    margin-right: .5rem;
+    color: #ffffff;
+  }
+  .nav-link.active{ 
+    color: red !important; 
+    font-weight: bold;
+  }
+  .toggle {
+    margin-right: 1rem;
+  }
+  .search {
+    @media (max-width: 991px) {
+      margin-left: 3rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.ship {
+  padding-top: 1rem;
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    @media(max-width: 991px) {
+      flex-direction: column;
+      
+    }
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    @media(max-width: 991px) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__params {
+    h1 {
+      margin-bottom: 2rem;
+    }
+  }
+  &__description {
+    margin-top: 1rem;
+  }
+}
+
+.card .btn, .ship__logo .btn {
+  border-radius: 0;
+}
+
+.overflow {
+  overflow-x: scroll;
+}
+
+.table {
+  ::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+  }
+  background-color: #fff;
+
+  &__body {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: overlay;
+  }
+
+  &__row {
+    min-width: 400px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #343a40 !important;
+
+    // &:first-child {
+    //   color: red;
+    //   .table__col {
+    //     position: relative;
+    //     span {
+    //       position: absolute;
+    //       top: 0;
+    //       left: 0;
+    //       text-transform: uppercase;
+    //       color: #000;
+    //     }
+    //   }
+    // }
+  }
+
+  &__col {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    margin: 0 auto;
+    padding: 0 !important;
+  }
+
+  &__desc {
+    height: 500px;
+    overflow-y: scroll;
+  }
+
+  &__image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.search {
+  position: relative;
+  &__list {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    z-index: 9999;
+  }
+  &__list-item {
+    cursor: pointer;
+  }
+}
+
