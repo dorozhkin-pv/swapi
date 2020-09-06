@@ -4,9 +4,10 @@ import { getData } from '../../helpers/api';
 
 export const ApiState = ({children}) => {
 	const getDataFromAPI = () => {
-		const url = "http://swapi.dev/api/films/2/";
+		const url = "https://swapi.dev/api/films/2/";
 
 		return getData(url).then(data => {
+			console.log('data: ', data);
 			let promises = [];
 	
 			data.starships.forEach(starship => {
