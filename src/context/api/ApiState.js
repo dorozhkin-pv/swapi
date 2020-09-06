@@ -7,11 +7,11 @@ export const ApiState = ({children}) => {
 		const url = "https://swapi.dev/api/films/2/";
 
 		return getData(url).then(data => {
-			console.log('data: ', data);
 			let promises = [];
 	
 			data.starships.forEach(starship => {
-				promises.push(getData(starship));
+				let starshipUrl = starship.replace('http', 'https');
+				promises.push(getData(starshipUrl));
 			});
 			
 			return Promise.all(promises).then(data => {
